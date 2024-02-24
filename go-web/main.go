@@ -13,7 +13,8 @@ func Home(w http.ResponseWriter, r *http.Request) {
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "about.page.tmpl")
+	renderTemplate(w, "about.page."+
+		"tmpl")
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string) {
