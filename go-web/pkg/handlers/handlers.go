@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"go-web/pkg/config"
+	"go-web/pkg/handlers/models"
 	"go-web/pkg/render"
 	"net/http"
 )
@@ -22,12 +23,18 @@ func NewRepo(a *config.AppConfig) *Repository {
 }
 
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "home.page.tmpl")
+	render.RenderTemplate(w, "home.page.tmpl", &models.TemplateData{})
 }
 
 func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "about.page."+
-		"tmpl")
+	//perform some logic
+	stringMap := make(map[string]string)
+	stringMap["test"] = "Hello, again"
+
+	//send the data to the template
+	render.RenderTemplate(w, "about.page.tmpl", &models.TemplateData{
+		StringMap: stringMap,
+	})
 }
 
 // NewHandlers sets the repository for the handlers
