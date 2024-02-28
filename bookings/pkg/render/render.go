@@ -2,8 +2,8 @@ package render
 
 import (
 	"bytes"
-	"go-web/pkg/config"
-	"go-web/pkg/handlers/models"
+	"github.com/tregear/bookings/pkg/config"
+	"github.com/tregear/bookings/pkg/handlers/models"
 	"html/template"
 	"log"
 	"net/http"

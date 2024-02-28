@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"go-web/pkg/config"
-	"go-web/pkg/handlers/models"
-	"go-web/pkg/render"
+	"github.com/tregear/bookings/pkg/config"
+	"github.com/tregear/bookings/pkg/handlers/models"
+	"github.com/tregear/bookings/pkg/render"
 	"net/http"
 )
 
